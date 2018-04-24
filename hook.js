@@ -6,7 +6,7 @@ var gameobjinfo = null;
 function MMOnMessgae(data){
 	//console.log(data);
 	if(gameobjinfo!=null){
-		var ssss = gameobjinfo.UserInfo;
+		var ssss = gameobjinfo.GameInfo;
 		var bbbb= ssss.getRoundSerial();
 	}
 	if(mysocket!=null){
