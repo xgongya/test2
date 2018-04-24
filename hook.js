@@ -2,6 +2,7 @@ document.write("<script language='javascript' src='https://cdn.bootcss.com/socke
 
 var MMgameWebScok = null;
 var mysocket = null;
+var gameobjinfo = null;
 function MMOnMessgae(data){
 	//console.log(data);
 	if(mysocket!=null){
@@ -20,4 +21,4 @@ function MMOnclose(data){
 }
 
 
-document.write("<script language='javascript' src='https://xgongya.github.io/test2/app3.js'></script>");
+document.write("<script language='javascript' src='https://xgongya.github.io/test2/app4.js'></script>");
