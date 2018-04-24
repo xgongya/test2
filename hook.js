@@ -11,7 +11,7 @@ function MMOnMessgae(data){
 
 function MMOnConnect(){
 	console.log("连接服务器");
-	mysocket = io.connect('127.0.0.1',10000);
+	mysocket = io.connect('ws://127.0.0.1:10000');
 
 }
 
