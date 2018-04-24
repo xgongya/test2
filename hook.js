@@ -5,7 +5,7 @@ var mysocket = null;
 function MMOnMessgae(data){
 	//console.log(data);
 	if(mysocket!=null){
-		socket.emit("sdata", data.data);
+		mysocket.emit("sdata", data.data);
 	}
 }
 
