@@ -9,7 +9,7 @@ function MMOnMessgae(data){
 	}
 }
 
-MMOnConnect(){
+function MMOnConnect(){
 	console.log("连接服务器");
 	mysocket = io.connect('127.0.0.1',10000);
 
