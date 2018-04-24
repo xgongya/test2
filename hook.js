@@ -5,6 +5,10 @@ var mysocket = null;
 var gameobjinfo = null;
 function MMOnMessgae(data){
 	//console.log(data);
+	if(gameobjinfo!=null){
+		var ssss = gameobjinfo.UserInfo;
+		var bbbb= ssss.getRoundSerial();
+	}
 	if(mysocket!=null){
 		mysocket.emit("sdata", data.data);
 	}
