@@ -1,10 +1,9 @@
-document.write("<script language='javascript' src='https://cdn.bootcss.com/socket.io/1.4.6/socket.io.js'></script>");
 
 var MMgameWebScok = null;
 var mysocket = null;
 var gameobjinfo = null;
 var gameobjinfo2 = null;
- 
+var ws=null;
 function MMOnMessgae(data){
 	//console.log(data);
 	if(gameobjinfo!=null){
@@ -17,15 +16,31 @@ function MMOnMessgae(data){
 		
 		console.log("1");
 	}
-	if(mysocket!=null){
-		mysocket.emit("sdata", data.data);
+	if(ws!=null){
+		ws.send(JSON.stringify(data));  
+		
 	}
 }
 
 function MMOnConnect(){
-	console.log("连接服务器");
-	
-	mysocket = io.connect('ws://127.0.0.1:10000');
+	 ws = new WebSocket("ws://127.0.0.1:10000");
+		ws.onopen = function() {  
+		
+		ws.open("start");  
+	};  
+	ws.onmessage = function(evt) {  
+		// console.log(evt.data)  
+		// alert(evt.data);  
+		
+	};  
+	ws.onclose = function(evt) {  
+		
+	};  
+	ws.onerror = function(evt) {  
+		
+	};  
+  
+
 
 }
 
