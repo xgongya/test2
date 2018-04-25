@@ -9,10 +9,12 @@ function MMOnMessgae(data){
 	//console.log(data);
 	if(gameobjinfo!=null){
 		
-		var sid1= gameobjinfo.getSid();
+		
+		
+		//var ssss = gameobjinfo.GameInfo;
 		var sid2= gameobjinfo2.getSid();
-		var ssss = gameobjinfo.GameInfo;
 		var bbbb= gameobjinfo2;
+		
 		console.log("1");
 	}
 	if(mysocket!=null){
