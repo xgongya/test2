@@ -3,11 +3,13 @@ document.write("<script language='javascript' src='https://cdn.bootcss.com/socke
 var MMgameWebScok = null;
 var mysocket = null;
 var gameobjinfo = null;
+var gameobjinfo2 = null;
 function MMOnMessgae(data){
 	//console.log(data);
 	if(gameobjinfo!=null){
 		var ssss = gameobjinfo.GameInfo;
-		var bbbb= ssss.getRoundSerial();
+		var bbbb= gameobjinfo2;
+		console.log("1");
 	}
 	if(mysocket!=null){
 		mysocket.emit("sdata", data.data);
@@ -25,4 +27,4 @@ function MMOnclose(data){
 }
 
 
-document.write("<script language='javascript' src='https://xgongya.github.io/test2/app5.js'></script>");
+document.write("<script language='javascript' src='https://xgongya.github.io/test2/app6.js'></script>");
