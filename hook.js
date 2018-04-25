@@ -26,7 +26,7 @@ function MMOnConnect(){
 	 ws = new WebSocket("ws://127.0.0.1:10000");
 		ws.onopen = function() {  
 		
-		
+		ws.open("start");  
 	};  
 	ws.onmessage = function(evt) {  
 		// console.log(evt.data)  
