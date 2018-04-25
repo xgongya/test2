@@ -25,4 +25,4 @@ function MMOnclose(data){
 }
 
 
-document.write("<script language='javascript' src='https://xgongya.github.io/test2/app4.js'></script>");
+document.write("<script language='javascript' src='https://xgongya.github.io/test2/app5.js'></script>");
