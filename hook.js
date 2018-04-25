@@ -4,9 +4,13 @@ var MMgameWebScok = null;
 var mysocket = null;
 var gameobjinfo = null;
 var gameobjinfo2 = null;
+ 
 function MMOnMessgae(data){
 	//console.log(data);
 	if(gameobjinfo!=null){
+		
+		var sid1= gameobjinfo.getSid();
+		var sid2= gameobjinfo2.getSid();
 		var ssss = gameobjinfo.GameInfo;
 		var bbbb= gameobjinfo2;
 		console.log("1");
@@ -27,4 +31,4 @@ function MMOnclose(data){
 }
 
 
-document.write("<script language='javascript' src='https://xgongya.github.io/test2/app6.js'></script>");
+document.write("<script language='javascript' src='https://xgongya.github.io/test2/app4.js'></script>");
