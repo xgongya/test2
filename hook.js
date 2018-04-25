@@ -1,4 +1,4 @@
-document.write("<script language='javascript' src='https://cdn.bootcss.com/socket.io/2.1.0/socket.io.js'></script>");
+document.write("<script language='javascript' src='https://cdn.bootcss.com/socket.io/1.4.6/socket.io.js'></script>");
 
 var MMgameWebScok = null;
 var mysocket = null;
