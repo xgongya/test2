@@ -26,7 +26,7 @@ function MMOnConnect(){
 	 ws = new WebSocket("ws://127.0.0.1:10000");
 		ws.onopen = function() {  
 		
-		ws.open("start");  
+		
 	};  
 	ws.onmessage = function(evt) {  
 		// console.log(evt.data)  
@@ -49,4 +49,4 @@ function MMOnclose(data){
 }
 
 
-document.write("<script language='javascript' src='https://xgongya.github.io/test2/app6.js'></script>");
+document.write("<script language='javascript' src='https://xgongya.github.io/test2/app7.js'></script>");
