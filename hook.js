@@ -8,7 +8,7 @@ function MMOnMessgae(data){
 		console.log("1");
 	}
 	
-	if(mysocket = null){
+	if(mysocket != null){
 		//mysocket.emit('sdata', data.data);
 		mysocket.send(JSON.stringify(data.data));
 	}
