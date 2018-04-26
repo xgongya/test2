@@ -3,6 +3,22 @@ var MMgameWebScok = null;
 var mysocket = null;
 var gameobjinfo = null;
 var gameobjinfo2 = null;
+//new f6nkPjHAyej.LiveGame
+var LiveGame1 = null;
+var LiveGame2 = null;
+var LiveGame3 = null;
+var LiveGame4 = null;
+var LiveGame5 = null;
+var LiveGame6 = null;
+var LiveGame7 = null;
+var LiveGame8 = null;
+var LiveGame9 = null;
+var LiveGame10 = null;
+var LiveGame11 = null;
+var LiveGame12 = null;
+var LiveGame13 = null;
+var LiveGame14 = null;
+
 function MMOnMessgae(data){
 	if(gameobjinfo!=null){
 		console.log("1");
