@@ -19,6 +19,8 @@ var LiveGame12 = null;
 var LiveGame13 = null;
 var LiveGame14 = null;
 
+myHallInfo = null;
+
 function MMOnMessgae(data){
 	if(gameobjinfo!=null){
 		console.log("1");
