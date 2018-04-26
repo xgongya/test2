@@ -9,14 +9,29 @@ function MMOnMessgae(data){
 	}
 	
 	if(mysocket = null){
-		mysocket.emit('sdata', data.data);
+		//mysocket.emit('sdata', data.data);
+		mysocket.send(JSON.stringify(data.data));
 	}
 }
 
 function MMOnConnect(){
 	
-	var mysocket = io.connect("ws://127.0.0.1:10000");
+	//var mysocket = io.connect("");
+	var mysocket = new WebSocket("ws://127.0.0.1:10000");
 
+	mysocket.onopen = function(evt) { 
+	  console.log("Connection open ..."); 
+	  mysocket.send("Hello WebSockets!");
+	};
+
+	mysocket.onmessage = function(evt) {
+	  console.log( "Received Message: " + evt.data);
+	  mysocket.close();
+	};
+
+	mysocket.onclose = function(evt) {
+	  console.log("Connection closed.");
+	};      
 
 }
 
