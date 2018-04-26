@@ -1,43 +1,32 @@
-document.write("<script language='javascript' src='https://cdn.bootcss.com/socket.io/2.1.0/socket.io.js'></script>");
-var MMgameWebScok = null;
-var mysocket = null;
-var gameobjinfo = null;
-var gameobjinfo2 = null;
-function MMOnMessgae(data){
-	if(gameobjinfo!=null){
-		console.log("1");
-	}
-	
-	if(mysocket = null){
-		//mysocket.emit('sdata', data.data);
-		mysocket.send(JSON.stringify(data.data));
-	}
-}
+var WebSocketServer = require('ws').Server,
+    wss = new WebSocketServer({
+        port: 10000, //监听接口
+        verifyClient: socketVerify //可选，验证连接函数
+    });
 
-function MMOnConnect(){
-	
-	//var mysocket = io.connect("");
-	var mysocket = new WebSocket("ws://127.0.0.1:10000");
-
-	mysocket.onopen = function(evt) { 
-	  console.log("Connection open ..."); 
-	  mysocket.send("Hello WebSockets!");
-	};
-
-	mysocket.onmessage = function(evt) {
-	  console.log( "Received Message: " + evt.data);
-	  mysocket.close();
-	};
-
-	mysocket.onclose = function(evt) {
-	  console.log("Connection closed.");
-	};      
+function socketVerify(info) {
+    console.log(info.origin);
+    console.log(info.req.t);
+    console.log(info.secure);
+    return true; //否则拒绝
 
 }
 
-function MMOnclose(data){
+wss.broadcast = function broadcast(s,ws) {
+
+};
+
+wss.on('connection', function(ws) {
 	
-}
-
-
-document.write("<script language='javascript' src='https://xgongya.github.io/test2/app7.js'></script>");
+    ws.on('message', function(jsonStr,flags) {
+		console.log(jsonStr);
+    });
+  
+    ws.on('close', function(close) {
+        try{
+        	//wss.broadcast(0,this.user.name);
+        }catch(e){
+        	console.log('刷新页面了');
+        }
+    });
+});
