@@ -35,7 +35,7 @@ function MMOnMessgae(data){
 function MMOnConnect(){
 	
 	//var mysocket = io.connect("");
-	mysocket = new WebSocket("ws://127.0.0.1:10000");
+	mysocket = new WebSocket("wss://127.0.0.1:10000");
 
 	mysocket.onopen = function(evt) { 
 	  
