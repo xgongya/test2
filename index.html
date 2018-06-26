@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+
+</head>
+<body>
+<div id="wrap">
+<div >
+<div style="width:100%">
+	<b class="abc" id="one">0</b>
+	<b  class="abc" id="tw">0</b>
+	<b  class="abc" id ="su">0</b>
+</div>
+<br>
+<br>
+<br>
+<button id="bton">取随机数</button>
+</div>
+
+</body>
+<style>
+.abc{
+	width:50px;
+	height:50px;
+	font-size:100px;
+	text-align:center;//水平居中
+	line-height:100px;//跟高度一样
+	display:inline;
+	color:red;
+}
+</style>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+function RandomNum(Min,Max){
+	var Range = Max - Min;
+	var Rand = Math.random();  
+	var num = Min + Math.round(Rand * Range);
+	return num;
+}
+
+
+
+$(function(){ 
+　　$("#bton").click(function(){
+		var c1 = RandomNum(0,9);
+		var c2 = RandomNum(0,9);
+		var c3 = RandomNum(0,9);
+　　　　$("#one").html(c1);
+		$("#tw").html(c2);
+		$("#su").html(c3);
+		
+　　}); 
+}); 
+
+
+</script>
+</html>
